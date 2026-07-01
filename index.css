@@ -1,0 +1,39 @@
+* body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F4F6F9;
+  color: #1E1E1E;
+}
+
+h1 {
+  font-family: 'Playfair+Display', 'Gill Sans';
+
+  color: #0A2463;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1B3A6B;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #4A5568;
+  line-height: 1.7;
+}
+
+a {
+  color: #1A6B3C;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #145C32;
+  text-decoration: underline;
+}

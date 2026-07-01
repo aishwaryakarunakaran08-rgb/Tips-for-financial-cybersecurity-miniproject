@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tips for Financial Cybersecurity</title>
+    <!-- The CSS file is linked right here -->
+    <link href="index.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: #F4F6F9; color: #1A1A2E; padding: 2rem 1rem; }
+    .page { max-width: 900px; margin: 0 auto; }
+    .hero { background: #0A2463; border-radius: 14px; padding: 2.5rem; margin-bottom: 2rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; color: #fff; font-size: 36px; font-weight: 600; letter-spacing: 0.4px; margin-bottom: 0.75rem; }
+    .hero p { color: #b8c8e8; font-size: 16px; line-height: 1.75; max-width: 680px; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: 'Playfair Display', serif; color: #0A2463; font-size: 24px; font-weight: 600; border-bottom: 2px solid #dde3ef; padding-bottom: 0.5rem; margin-bottom: 1.25rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; }
+    .card-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .card h3 { font-size: 15px; font-weight: 500; color: #0A2463; margin-bottom: 6px; }
+    .card p { font-size: 13.5px; color: #4A5568; line-height: 1.6; }
+    .signs-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .sign-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f4f8; }
+    .sign-item:last-child { border-bottom: none; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #1A6B3C; margin-top: 6px; flex-shrink: 0; }
+    .sign-item span { font-size: 14.5px; color: #1A1A2E; line-height: 1.6; }
+    .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 20px; margin-left: 7px; vertical-align: middle; }
+    .badge-red { background: #FCEBEB; color: #A32D2D; }
+    .badge-amber { background: #FAEEDA; color: #854F0B; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4F6F9;
+      color: #1A1A2E;
+      padding: 2rem 1rem;
+    }
+
+    .page { max-width: 920px; margin: 0 auto; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0A2463 0%, #1B3A6B 100%);
+      border-radius: 16px;
+      padding: 2.75rem 2.5rem;
+      margin-bottom: 2.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .hero-icon {
+      width: 64px; height: 64px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .hero p { color: #b8c8e8; font-size: 15px; line-height: 1.7; }
+
+    /* Section heading */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: #0A2463;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #dde3ef;
+    }
+
+    /* Tips grid */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 16px;
+      margin-bottom: 2.5rem;
+    }
+
+    .tip-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1.4rem 1.4rem 1.25rem;
+      display: flex;
+      gap: 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .tip-card:hover { box-shadow: 0 4px 18px rgba(10,36,99,0.09); }
+
+    .tip-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tip-body h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: #0A2463;
+      margin-bottom: 6px;
+    }
+    .tip-body p {
+      font-size: 13.5px;
+      color: #4A5568;
+      line-height: 1.65;
+    }
+
+    /* Color themes per card */
+    .c1 .tip-num { background: #E6F1FB; color: #185FA5; }
+    .c2 .tip-num { background: #EAF3DE; color: #3B6D11; }
+    .c3 .tip-num { background: #FAEEDA; color: #854F0B; }
+    .c4 .tip-num { background: #FBEAF0; color: #993556; }
+    .c5 .tip-num { background: #E1F5EE; color: #0F6E56; }
+    .c6 .tip-num { background: #EEEDFE; color: #534AB7; }
+    .c7 .tip-num { background: #FCEBEB; color: #A32D2D; }
+    .c8 .tip-num { background: #F1EFE8; color: #5F5E5A; }
+
+    .c1 { border-left: 3px solid #378ADD; }
+    .c2 { border-left: 3px solid #639922; }
+    .c3 { border-left: 3px solid #BA7517; }
+    .c4 { border-left: 3px solid #D4537E; }
+    .c5 { border-left: 3px solid #1D9E75; }
+    .c6 { border-left: 3px solid #7F77DD; }
+    .c7 { border-left: 3px solid #E24B4A; }
+    .c8 { border-left: 3px solid #888780; }
+
+    /* Quick checklist */
+    .checklist-box {
+      background: #0A2463;
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .checklist-box h2 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 1.1rem;
+    }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    .check-item svg { flex-shrink: 0; }
+    .check-item span { color: #d0ddf5; font-size: 13.5px; }
+
+  </style>
+</head>
+  <body>
+    <h1>Tips for Financial Cybersecurity</h1>
+    <p>Protecting your personal and financial information online is more critical than ever. Always use strong, unique passwords for your banking accounts, enable multi-factor authentication (MFA), and beware of phishing emails or texts asking for your credentials.</p>
+  <div class="page">
+  <div class="hero">
+    <h1>Customer Account Takeover</h1>
+    <p>Account takeover occurs when criminals steal customer credentials — usernames, passwords, or MFA codes — to gain unauthorized access to personal and financial accounts. Understanding how these attacks happen is your first line of defence.</p>
+  </div>
+
+  <div class="section">
+    <h2>How Account Takeovers Happen</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" style="background:#E6F1FB;">
+          <svg width="22" height="22" fill="none" stroke="#185FA5" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </div>
+        <h3>Phishing &amp; Smishing</h3>
+        <p>Fake emails or SMS messages impersonating banks or regulators to harvest passwords, account numbers, or Social Security numbers.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#FAEEDA;">
+          <svg width="22" height="22" fill="none" stroke="#854F0B" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3>Fake Websites</h3>
+        <p>Lookalike login pages mimicking real financial institutions, luring victims via search results or malicious email links.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#FBEAF0;">
+          <svg width="22" height="22" fill="none" stroke="#993556" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/><line x1="12" y1="14" x2="12" y2="17"/><circle cx="12" cy="19" r="0.5" fill="#993556"/></svg>
+        </div>
+        <h3>Social Engineering</h3>
+        <p>Fraudsters call posing as bank representatives to trick you into revealing personal account details over the phone.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#FCEBEB;">
+          <svg width="22" height="22" fill="none" stroke="#A32D2D" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+        </div>
+        <h3>Stolen Credentials</h3>
+        <p>Data breaches, dark web sales, keyloggers, or dumpster-diving for discarded statements can expose your login information.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Signs of an Account Takeover</h2>
+    <div class="signs-box">
+      <div class="sign-item"><div class="dot"></div><span>Unfamiliar or unauthorized transactions, money movements, or deposits <span class="badge badge-red">High risk</span></span></div>
+      <div class="sign-item"><div class="dot"></div><span>Missing funds or securities from your account</span></div>
+      <div class="sign-item"><div class="dot"></div><span>Unauthorized updates to account information — address, email, or phone number</span></div>
+      <div class="sign-item"><div class="dot"></div><span>Unexpected notifications about account changes you did not request</span></div>
+      <div class="sign-item"><div class="dot"></div><span>Large volume of spam texts or emails shortly after logging in <span class="badge badge-amber">Warning</span></span></div>
+      <div class="sign-item"><div class="dot"></div><span>Sudden loss of mobile phone service — a possible SIM-swapping attack <span class="badge badge-red">High risk</span></span></div>
+      <div class="sign-item"><div class="dot"></div><span>Missing account statements, confirmations, or other financial documents</span></div>
+      <div class="sign-item"><div class="dot"></div><span>Unfamiliar accounts or creditors appearing on your credit report</span></div>
+      <div class="sign-item"><div class="dot"></div><span>Funds that have been frozen by your financial institution</span></div>
+    </div>
+  </div>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-icon">
+      <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/>
+        <polyline points="9,12 11,14 15,10"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Cybersecurity Tips to Safeguard Your Account</h1>
+      <p>Follow these 8 essential practices to protect your financial accounts from unauthorized access and cyber threats.</p>
+    </div>
+  </div>
+
+  <!-- Tips grid -->
+  <p class="section-title">8 Essential Security Practices</p>
+  <div class="tips-grid">
+
+    <div class="tip-card c1">
+      <div class="tip-num">1</div>
+      <div class="tip-body">
+        <h3>Watch What You Click</h3>
+        <p>Avoid clicking suspicious links or downloading attachments from unknown sources. Instead, go directly to your financial institution's website or app to verify any communication.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c2">
+      <div class="tip-num">2</div>
+      <div class="tip-body">
+        <h3>Use Strong Passwords</h3>
+        <p>Use a unique, strong password for every account and change them regularly. A password manager app can suggest and securely store individual passwords for each account.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c3">
+      <div class="tip-num">3</div>
+      <div class="tip-body">
+        <h3>Enable Multifactor Authentication</h3>
+        <p>MFA adds a second layer beyond your password — such as a texted code, fingerprint, or facial recognition — significantly reducing the risk of account takeover.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c4">
+      <div class="tip-num">4</div>
+      <div class="tip-body">
+        <h3>Maintain Device Security</h3>
+        <p>Keep security software with antivirus, anti-spam, and spyware detection up to date. Enable automatic updates. If using cloud storage, verify the provider uses MFA and data encryption.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c5">
+      <div class="tip-num">5</div>
+      <div class="tip-body">
+        <h3>Use Your Own Device</h3>
+        <p>Avoid accessing financial accounts on public computers — they may contain software that captures passwords. If you must, clear your cache, temporary files, and browsing history after logging out.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c6">
+      <div class="tip-num">6</div>
+      <div class="tip-body">
+        <h3>Browse Carefully</h3>
+        <p>Use only secure sites starting with "https" and a padlock icon. Avoid multitasking across sites while logged in to prevent session stealing. Always click "Log Out" — don't just close the tab.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c7">
+      <div class="tip-num">7</div>
+      <div class="tip-body">
+        <h3>Be Cyber Safe on Wi-Fi</h3>
+        <p>Public Wi-Fi at airports, hotels, and restaurants often has reduced security. Beware of fake hotspots with familiar-sounding names. Warning signs: slow connections or no terms-of-service prompt.</p>
+      </div>
+    </div>
+
+    <div class="tip-card c8">
+      <div class="tip-num">8</div>
+      <div class="tip-body">
+        <h3>Review All Correspondence</h3>
+        <p>Review account activity and monthly statements thoroughly as soon as they're available. Keep your contact info current and report any unauthorized activity to your financial institution immediately.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick checklist -->
+  <div class="checklist-box">
+    <h2>Quick Security Checklist</h2>
+    <div class="checklist">
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Don't click suspicious links</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Use unique passwords</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Enable MFA on all accounts</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Keep antivirus up to date</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Avoid public computers</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Check for https + padlock</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Avoid public Wi-Fi for banking</span>
+      </div>
+      <div class="check-item">
+        <svg width="16" height="16" fill="none" stroke="#4ade80" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+        <span>Review statements monthly</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
